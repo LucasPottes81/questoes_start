@@ -1,0 +1,246 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #172b4d;
+}
+
+.container {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #142d50;
+}
+
+header p {
+  color: #64748b;
+}
+
+.quiz {
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.contador {
+  display: inline-block;
+  background: #e0efff;
+  color: #155eaa;
+  padding: 9px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quiz h2 {
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.alternativas {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.alternativa {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  padding: 20px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #172b4d;
+}
+
+.alternativa:hover {
+  background: #eaf3ff;
+  border-color: #3b82f6;
+}
+
+.alternativa strong {
+  background: #e2e8f0;
+  padding: 9px 13px;
+  border-radius: 8px;
+}
+
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.navegacao button {
+  background: #164e85;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 13px 22px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.navegacao button:hover:not(:disabled) {
+  background: #0e3763;
+}
+
+.navegacao button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px auto;
+    padding: 12px;
+  }
+
+  .quiz {
+    padding: 22px;
+  }
+
+  .quiz h2 {
+    font-size: 20px;
+  }
+
+  .alternativa {
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+
+
+/* Alternativa correta */
+.alternativa.correta {
+  background-color: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+/* Alternativa incorreta */
+.alternativa.incorreta {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+/* Mantém as cores após o clique */
+.alternativa:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.alternativa.correta:hover {
+  background-color: #dcfce7;
+  border-color: #22c55e;
+}
+
+.alternativa.incorreta:hover {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+}
+
+/* Explicação */
+.resultado {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.resultado h3 {
+  margin-top: 0;
+}
+
+.resultado p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.resultado.acerto {
+  background-color: #f0fdf4;
+  border-left: 5px solid #22c55e;
+}
+
+.resultado.erro {
+  background-color: #fef2f2;
+  border-left: 5px solid #ef4444;
+}
+
+
+/* Seleção dos quadros */
+
+.lista-quadros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card-quadro {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #172b4d;
+}
+
+.card-quadro:hover {
+  border-color: #3b82f6;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-quadro h2 {
+  margin-top: 0;
+}
+
+.card-quadro p {
+  color: #64748b;
+}
+
+.card-quadro span {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.voltar-quadros {
+  display: block;
+  background: transparent;
+  color: #2563eb;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  padding: 8px 0;
+}
+
+.voltar-quadros:hover {
+  text-decoration: underline;
+}

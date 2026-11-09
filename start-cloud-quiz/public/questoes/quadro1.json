@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "pergunta": "Qual modelo de precificação do Amazon EC2 é o mais adequado para uma carga de trabalho que pode ser interrompida a qualquer momento sem impacto negativo, oferecendo o maior desconto possível?",
+    "alternativas": [
+      "Instâncias Sob Demanda (On-Demand)",
+      "Instâncias Reservadas (Reserved Instances)",
+      "Instâncias Spot (Spot Instances)",
+      "Hosts Dedicados (Dedicated Hosts)"
+    ],
+    "correta": 2,
+    "explicacao": "As Instâncias Spot permitem que você utilize a capacidade computacional não utilizada do Amazon EC2 com grandes descontos (até 90%). Elas são ideais para cargas de trabalho flexíveis, tolerantes a falhas e que não têm dependência estrita de tempo."
+  },
+  {
+    "id": 2,
+    "pergunta": "Uma empresa precisa armazenar dados de backup que serão acessados raramente (talvez uma vez por ano), mas quando solicitados, a recuperação deve ocorrer de forma imediata (em milissegundos). Qual classe de armazenamento do Amazon S3 é a escolha mais econômica e adequada?",
+    "alternativas": [
+      "S3 Standard",
+      "S3 Standard-Infrequent Access (S3 Standard-IA)",
+      "S3 Glacier Deep Archive",
+      "S3 Intelligent-Tiering"
+    ],
+    "correta": 1,
+    "explicacao": "O S3 Standard-IA é projetado para dados acessados com pouca frequência, mas que exigem acesso rápido quando necessário. Ele oferece taxas de armazenamento mais baixas do que o S3 Standard. O Glacier seria mais barato, mas o tempo de recuperação leva minutos ou horas, não milissegundos."
+  },
+  {
+    "id": 3,
+    "pergunta": "Qual ferramenta da AWS permite que os clientes estimem os custos mensais de seus serviços na nuvem com base na arquitetura esperada ANTES de provisionar qualquer recurso?",
+    "alternativas": [
+      "AWS Pricing Calculator",
+      "AWS Budgets",
+      "AWS Cost Explorer",
+      "AWS Cost and Usage Report"
+    ],
+    "correta": 0,
+    "explicacao": "A AWS Pricing Calculator é uma ferramenta de planejamento gratuita baseada na web que permite criar estimativas de custos para casos de uso da AWS, ajudando a prever gastos antes de criar os recursos na nuvem."
+  },
+  {
+    "id": 4,
+    "pergunta": "Qual serviço gerenciado da AWS é projetado especificamente para facilitar a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem (como MySQL, PostgreSQL e SQL Server)?",
+    "alternativas": [
+      "Amazon Redshift",
+      "Amazon DynamoDB",
+      "Amazon Neptune",
+      "Amazon RDS"
+    ],
+    "correta": 3,
+    "explicacao": "O Amazon Relational Database Service (RDS) é o serviço focado em bancos de dados relacionais. O DynamoDB é NoSQL, o Redshift é um Data Warehouse e o Neptune é voltado para bancos de dados em grafos."
+  },
+  {
+    "id": 5,
+    "pergunta": "Ao seguir as melhores práticas de segurança da AWS, qual recurso do AWS IAM (Identity and Access Management) deve ser usado para conceder permissões temporárias a um aplicativo rodando em uma instância do EC2 para que ele possa acessar um bucket do S3?",
+    "alternativas": [
+      "IAM User (Usuário IAM)",
+      "IAM Role (Função IAM)",
+      "IAM Group (Grupo IAM)",
+      "IAM Policy (Política IAM)"
+    ],
+    "correta": 1,
+    "explicacao": "As Funções do IAM (Roles) não têm credenciais de longo prazo (como senhas ou chaves de acesso) associadas a elas. Elas fornecem permissões temporárias e são a maneira recomendada e segura de conceder permissões a recursos da AWS, como instâncias do EC2."
+  },
+  {
+    "id": 6,
+    "pergunta": "O conceito da nuvem de adicionar ou remover dinamicamente capacidade computacional para atender às variações na demanda de tráfego (garantindo que você pague apenas pelo que usa) é conhecido como:",
+    "alternativas": [
+      "Elasticidade (Elasticity)",
+      "Alta Disponibilidade (High Availability)",
+      "Tolerância a Falhas (Fault Tolerance)",
+      "Confiabilidade (Reliability)"
+    ],
+    "correta": 0,
+    "explicacao": "A Elasticidade é a capacidade de dimensionar recursos para cima ou para baixo sob demanda. O Amazon EC2 Auto Scaling é um exemplo de serviço que fornece essa característica, ajustando instâncias conforme o tráfego."
+  },
+  {
+    "id": 7,
+    "pergunta": "O que compõe fisicamente uma Zona de Disponibilidade (Availability Zone - AZ) dentro da infraestrutura global da AWS?",
+    "alternativas": [
+      "Uma coleção de Regiões interconectadas geograficamente",
+      "Um ou mais data centers distintos com energia, rede e conectividade redundantes",
+      "Um servidor físico isolado dentro de um único data center da AWS",
+      "Um ponto de presença (Edge Location) focado em cache global"
+    ],
+    "correta": 1,
+    "explicacao": "Uma Availability Zone (AZ) é formada por um ou mais data centers discretos com energia, rede e conectividade redundantes, situados em uma mesma Região da AWS. Elas são isoladas de falhas em outras AZs."
+  },
+  {
+    "id": 8,
+    "pergunta": "Qual é o nível mais básico de plano de suporte da AWS que oferece acesso a todas as verificações de otimização, segurança e desempenho do AWS Trusted Advisor?",
+    "alternativas": [
+      "Plano Basic",
+      "Plano Developer",
+      "Plano Business",
+      "Plano Enterprise"
+    ],
+    "correta": 2,
+    "explicacao": "O Plano Business é o primeiro nível de suporte que desbloqueia o acesso a todo o conjunto de verificações do AWS Trusted Advisor. Os planos Basic e Developer oferecem apenas um conjunto limitado de verificações focadas em segurança e cotas de serviço."
+  },
+  {
+    "id": 9,
+    "pergunta": "Além do gerenciamento centralizado de políticas de segurança (SCPs), qual é um benefício financeiro direto de utilizar o AWS Organizations com o Faturamento Consolidado (Consolidated Billing)?",
+    "alternativas": [
+      "Isenção de todas as taxas de transferência de dados entre regiões",
+      "Descontos automáticos de 50% em instâncias Spot",
+      "Créditos mensais gratuitos para serviços de Machine Learning",
+      "Combinação do uso de várias contas para obter descontos por volume nas faixas de preço"
+    ],
+    "correta": 3,
+    "explicacao": "O faturamento consolidado permite tratar todas as contas da organização como uma única conta para fins de faturamento. Isso ajuda as empresas a atingirem mais rapidamente as faixas de preço mais baratas (descontos por volume) de serviços como S3 e EC2."
+  },
+  {
+    "id": 10,
+    "pergunta": "De acordo com o Modelo de Responsabilidade Compartilhada da AWS, qual das seguintes tarefas é de responsabilidade do CLIENTE?",
+    "alternativas": [
+      "Configuração de criptografia para os dados armazenados no Amazon S3",
+      "Manutenção física dos servidores e do armazenamento nos data centers",
+      "Atualização do firmware de rede dos roteadores globais da AWS",
+      "Garantir o isolamento e a segurança do hipervisor no Amazon EC2"
+    ],
+    "correta": 0,
+    "explicacao": "O cliente é responsável pela 'segurança NA nuvem', o que inclui a proteção e criptografia de seus próprios dados no Amazon S3, gerenciamento de firewall (Security Groups) e controle de acesso (IAM). A AWS cuida da 'segurança DA nuvem' (hardware, hipervisor e infraestrutura global)."
+  }
+]
