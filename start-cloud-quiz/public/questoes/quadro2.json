@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "pergunta": "Qual serviço totalmente gerenciado da AWS oferece acesso a modelos de fundação (FMs) de alto desempenho por meio de uma única API, facilitando a construção de aplicações de IA generativa?",
+    "alternativas": [
+      "Amazon SageMaker",
+      "Amazon Bedrock",
+      "Amazon Lex",
+      "Amazon Rekognition"
+    ],
+    "correta": 1,
+    "explicacao": "O Amazon Bedrock é o serviço focado em IA generativa, fornecendo acesso via API a diversos modelos de fundação (como os da Anthropic, Meta e os próprios Amazon Titan)."
+  },
+  {
+    "id": 2,
+    "pergunta": "Qual serviço da AWS permite que desenvolvedores e cientistas de dados construam, treinem e implantem modelos de machine learning (aprendizado de máquina) em escala de forma rápida e gerenciada?",
+    "alternativas": [
+      "Amazon Comprehend",
+      "Amazon Textract",
+      "Amazon SageMaker",
+      "Amazon Macie"
+    ],
+    "correta": 2,
+    "explicacao": "O Amazon SageMaker é a plataforma de ML da AWS ponta a ponta, oferecendo ferramentas integradas para criar, treinar e fazer o deploy de modelos preditivos."
+  },
+  {
+    "id": 3,
+    "pergunta": "Qual serviço atua como um barramento de eventos (event bus) sem servidor que facilita a conexão de aplicações utilizando dados de seus próprios apps, apps SaaS e serviços da AWS?",
+    "alternativas": [
+      "Amazon EventBridge",
+      "Amazon MQ",
+      "Amazon SQS",
+      "AWS AppSync"
+    ],
+    "correta": 0,
+    "explicacao": "O Amazon EventBridge é um barramento de eventos sem servidor que facilita a criação de aplicações baseadas em eventos em grande escala."
+  },
+  {
+    "id": 4,
+    "pergunta": "Uma arquitetura em nuvem precisa desacoplar os componentes de um sistema, garantindo que solicitações de processamento entrem em uma fila e não sejam perdidas caso o servidor de destino falhe. Qual serviço é o ideal?",
+    "alternativas": [
+      "Amazon SQS",
+      "Amazon SNS",
+      "AWS Step Functions",
+      "Amazon Kinesis"
+    ],
+    "correta": 0,
+    "explicacao": "O Amazon Simple Queue Service (SQS) é um serviço de fila de mensagens totalmente gerenciado que permite desacoplar e escalar microsserviços, sendo ideal para evitar perda de dados de processamento."
+  },
+  {
+    "id": 5,
+    "pergunta": "Qual serviço da AWS fornece um sistema de mensagens no modelo de publicação/assinatura (pub/sub), sendo capaz de enviar notificações do tipo \"push\", e-mails e mensagens SMS em massa?",
+    "alternativas": [
+      "Amazon SES",
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon Pinpoint"
+    ],
+    "correta": 1,
+    "explicacao": "O Amazon Simple Notification Service (SNS) coordena e gerencia a entrega de mensagens (pub/sub) para endpoints e clientes inscritos, incluindo o envio de SMS e e-mails de alerta."
+  },
+  {
+    "id": 6,
+    "pergunta": "Qual serviço distribui automaticamente o tráfego de entrada de aplicativos entre vários destinos, como instâncias do Amazon EC2 e contêineres, garantindo maior disponibilidade e tolerância a falhas?",
+    "alternativas": [
+      "Amazon API Gateway",
+      "AWS Global Accelerator",
+      "Elastic Load Balancing (ELB)",
+      "Amazon Route 53"
+    ],
+    "correta": 2,
+    "explicacao": "O Elastic Load Balancing (ELB) é responsável por distribuir o tráfego de entrada automaticamente, suportando escalabilidade e alta disponibilidade dos recursos computacionais."
+  },
+  {
+    "id": 7,
+    "pergunta": "Para aplicações que requerem roteamento de tráfego de altíssimo desempenho operando na camada de conexão (TCP, UDP), com latência extremamente baixa, qual tipo de balanceador de carga deve ser utilizado?",
+    "alternativas": [
+      "Application Load Balancer (ALB)",
+      "Classic Load Balancer (CLB)",
+      "Network Load Balancer (NLB)",
+      "Gateway Load Balancer (GWLB)"
+    ],
+    "correta": 2,
+    "explicacao": "O Network Load Balancer (NLB) atua na camada 4 do modelo OSI (TCP/UDP) e é otimizado para lidar com tráfego volátil, milhões de requisições por segundo e latências ultrabaixas."
+  },
+  {
+    "id": 8,
+    "pergunta": "Qual serviço da AWS permite provisionar uma seção logicamente isolada da nuvem, onde é possível iniciar recursos em uma rede virtual que você mesmo projeta (com total controle de IPs, sub-redes e tabelas de roteamento)?",
+    "alternativas": [
+      "Amazon CloudFront",
+      "AWS Direct Connect",
+      "Amazon VPC",
+      "AWS Transit Gateway"
+    ],
+    "correta": 2,
+    "explicacao": "A Amazon Virtual Private Cloud (Amazon VPC) permite criar uma rede virtual privada e isolada logicamente para colocar os seus serviços da AWS com segurança."
+  },
+  {
+    "id": 9,
+    "pergunta": "Qual é o serviço responsável pelo Sistema de Nomes de Domínio (DNS) altamente disponível e escalável, além de realizar roteamento de tráfego de usuários com base em latência ou geolocalização?",
+    "alternativas": [
+      "Amazon Route 53",
+      "AWS Cloud Map",
+      "Elastic Load Balancing",
+      "AWS Direct Connect"
+    ],
+    "correta": 0,
+    "explicacao": "O Amazon Route 53 é o serviço de DNS da AWS que traduz nomes de domínio para IPs e permite configurações avançadas de roteamento global de tráfego."
+  },
+  {
+    "id": 10,
+    "pergunta": "Uma empresa precisa transferir cerca de 50 Terabytes de dados de seu data center local para a AWS. A conexão com a internet é muito lenta. Qual dispositivo físico da Família Snow é o mais adequado e econômico para essa quantidade de dados?",
+    "alternativas": [
+      "AWS Snowmobile",
+      "AWS Snowcone",
+      "AWS Outposts",
+      "AWS Snowball Edge"
+    ],
+    "correta": 3,
+    "explicacao": "O AWS Snowball Edge suporta transferências físicas em larga escala e é o dispositivo ideal e prático para movimentar dezenas de Terabytes ou Petabytes localmente."
+  },
+  {
+    "id": 11,
+    "pergunta": "Uma equipe em um ambiente remoto (como um navio ou área rural) possui restrição severa de espaço físico e energia, mas precisa coletar dados, processá-los localmente e depois transferi-los para a AWS. Qual dispositivo ultracompacto devem usar?",
+    "alternativas": [
+      "AWS Snowmobile",
+      "AWS Wavelength",
+      "AWS Snowcone",
+      "AWS Snowball Edge Compute Optimized"
+    ],
+    "correta": 2,
+    "explicacao": "O AWS Snowcone é o menor e mais portátil dispositivo de edge computing e transferência de dados da AWS, pesando cerca de 2 quilos, perfeito para ambientes remotos com restrição de espaço."
+  },
+  {
+    "id": 12,
+    "pergunta": "Uma corporação multinacional precisa migrar um arquivo histórico gigantesco de 80 Petabytes. Para transferir todo esse volume de uma só vez com máxima segurança física, qual serviço/dispositivo deve ser acionado?",
+    "alternativas": [
+      "AWS DataSync",
+      "AWS Snowmobile",
+      "AWS Direct Connect",
+      "AWS Storage Gateway"
+    ],
+    "correta": 1,
+    "explicacao": "O AWS Snowmobile é um contêiner robusto transportado por uma carreta física, capaz de transferir até 100 PB de dados por unidade para a AWS em escala corporativa maciça."
+  },
+  {
+    "id": 13,
+    "pergunta": "Qual serviço de IA da AWS deve ser escolhido se um desenvolvedor quiser adicionar recursos de análise visual (reconhecimento de objetos, pessoas, texto e moderação) em um aplicativo de imagens e vídeos?",
+    "alternativas": [
+      "Amazon Textract",
+      "Amazon Polly",
+      "Amazon Rekognition",
+      "Amazon Transcribe"
+    ],
+    "correta": 2,
+    "explicacao": "O Amazon Rekognition facilita a adição de análise avançada de imagem e vídeo aos aplicativos usando tecnologia de aprendizado profundo (Deep Learning) da AWS."
+  },
+  {
+    "id": 14,
+    "pergunta": "Qual serviço da AWS permite estabelecer uma conexão de rede dedicada, privada e física entre o seu data center local e a nuvem da AWS, garantindo largura de banda consistente e ignorando a internet pública?",
+    "alternativas": [
+      "AWS Site-to-Site VPN",
+      "AWS Direct Connect",
+      "Amazon VPC Peering",
+      "AWS Transit Gateway"
+    ],
+    "correta": 1,
+    "explicacao": "O AWS Direct Connect estabelece um link de fibra dedicado diretamente ao backbone da AWS, o que aumenta a consistência de rede e barateia a transferência pesada de dados, evitando a internet pública."
+  },
+  {
+    "id": 15,
+    "pergunta": "Qual serviço da AWS atua como uma Rede de Distribuição de Conteúdo (CDN) global, enviando dados, vídeos e APIs para os clientes com baixa latência usando a rede global de Edge Locations?",
+    "alternativas": [
+      "AWS Global Accelerator",
+      "Amazon CloudFront",
+      "AWS WAF",
+      "Amazon S3 Transfer Acceleration"
+    ],
+    "correta": 1,
+    "explicacao": "O Amazon CloudFront é a CDN da AWS, fazendo cache eficiente do conteúdo nas Edge Locations para que o usuário final receba a resposta da localidade geograficamente mais próxima."
+  }
+]
