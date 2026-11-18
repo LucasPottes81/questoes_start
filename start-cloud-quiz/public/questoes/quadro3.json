@@ -1,1 +1,142 @@
-{}
+[
+  {
+    "id": 1,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 2,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 3,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 4,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 5,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 6,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 7,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 8,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 9,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 10,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 11,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 12,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 13,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 14,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 15,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 16,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 17,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 18,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 19,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  },
+  {
+    "id": 20,
+    "pergunta": "",
+    "alternativas": ["", "", "", ""],
+    "correta": null,
+    "explicacao": ""
+  }
+]
