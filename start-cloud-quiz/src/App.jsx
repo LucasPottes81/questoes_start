@@ -13,6 +13,11 @@ const quadros = [
     titulo: "Quadro 2",
     arquivo: "quadro2.json",
   },
+{
+    id: 3,
+    titulo: "Quadro 3",
+    arquivo: "quadro3.json",
+}
 ];
 
 function App() {
@@ -46,7 +51,7 @@ function App() {
         const dados = await resposta.json();
 
         if (!Array.isArray(dados)) {
-          throw new Error("O JSON precisa conter uma lista de questões.");
+          throw new Error("Questões sendo criadas👀👀.");
         }
 
         setQuestoes(dados);
