@@ -1,142 +1,242 @@
 [
   {
     "id": 1,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Uma instância EC2 está hospedada em uma sub-rede privada e precisa baixar atualizações de segurança da internet, mas não deve receber conexões iniciadas de fora da VPC. Qual componente de rede deve ser configurado?",
+    "alternativas": [
+      "NAT Gateway",
+      "Internet Gateway",
+      "AWS Direct Connect",
+      "VPC Peering"
+    ],
+    "correta": 0,
+    "explicacao": "O NAT Gateway permite que instâncias em uma sub-rede privada se conectem à internet ou a outros serviços da AWS, mas impede que a internet inicie conexões com essas instâncias. O Internet Gateway permitiria acesso bidirecional (sub-rede pública)."
   },
   {
     "id": 2,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Para que uma sub-rede dentro de uma Amazon VPC seja considerada uma 'sub-rede pública', qual configuração obrigatória deve existir em sua tabela de rotas (Route Table)?",
+    "alternativas": [
+      "Uma rota apontando o tráfego de saída para um NAT Gateway",
+      "Uma regra de entrada permitindo tráfego HTTP na Network ACL",
+      "Uma rota apontando o tráfego de saída (0.0.0.0/0) para um Internet Gateway",
+      "Um Security Group com todas as portas abertas"
+    ],
+    "correta": 2,
+    "explicacao": "O que define tecnicamente uma sub-rede pública na AWS é ter uma rota na tabela de rotas direcionando o tráfego destinado à internet (0.0.0.0/0) diretamente para um Internet Gateway (IGW) anexado à VPC."
   },
   {
     "id": 3,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual serviço permite conectar uma Amazon VPC diretamente a serviços suportados da AWS (como Amazon S3 e DynamoDB) de forma privada, sem que o tráfego precise passar pela internet pública ou exigir um NAT Gateway?",
+    "alternativas": [
+      "AWS Site-to-Site VPN",
+      "AWS Transit Gateway",
+      "Amazon CloudFront",
+      "VPC Endpoint"
+    ],
+    "correta": 3,
+    "explicacao": "Os VPC Endpoints (do tipo Gateway ou Interface) mantêm todo o tráfego entre a sua VPC e os serviços da AWS estritamente dentro da rede interna da AWS, aumentando a segurança e reduzindo custos com NAT Gateway."
   },
   {
     "id": 4,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual serviço da AWS atua como um hub de trânsito centralizado para interconectar dezenas de Amazon VPCs e redes locais (on-premises) através de um único gateway, simplificando topologias complexas?",
+    "alternativas": [
+      "VPC Peering",
+      "AWS Transit Gateway",
+      "Internet Gateway",
+      "AWS Global Accelerator"
+    ],
+    "correta": 1,
+    "explicacao": "Enquanto o VPC Peering exige conexões ponto a ponto (1 para 1) que não são transitivas, o AWS Transit Gateway funciona como um roteador central (hub-and-spoke) que simplifica a interconexão em larga escala."
   },
   {
     "id": 5,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Uma empresa precisa de um banco de dados NoSQL totalmente gerenciado, de chave-valor e documentos, que garanta desempenho na casa de milissegundos em qualquer escala e sem necessidade de gerenciar servidores. Qual serviço atende a esse cenário?",
+    "alternativas": [
+      "Amazon Aurora",
+      "Amazon RDS",
+      "Amazon DynamoDB",
+      "Amazon Redshift"
+    ],
+    "correta": 2,
+    "explicacao": "O Amazon DynamoDB é o banco de dados NoSQL serverless da AWS projetado para latência de milissegundos de um único dígito em qualquer escala."
   },
   {
     "id": 6,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual serviço de banco de dados da AWS é um Data Warehouse (armazém de dados) em escala de petabytes, otimizado para consultas analíticas complexas (OLAP) e inteligência de negócios (BI)?",
+    "alternativas": [
+      "Amazon Redshift",
+      "Amazon ElastiCache",
+      "Amazon RDS for PostgreSQL",
+      "Amazon DocumentDB"
+    ],
+    "correta": 0,
+    "explicacao": "O Amazon Redshift é o serviço de Data Warehouse da AWS projetado especificamente para análise de grandes volumes de dados (OLAP), diferindo do RDS que é focado em transações (OLTP)."
   },
   {
     "id": 7,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Para acelerar o tempo de resposta de uma aplicação web que realiza muitas leituras repetitivas no banco de dados relacional, armazenando os dados mais acessados em memória (in-memory), qual serviço deve ser implementado?",
+    "alternativas": [
+      "Amazon Athena",
+      "AWS Glue",
+      "Amazon EFS",
+      "Amazon ElastiCache"
+    ],
+    "correta": 3,
+    "explicacao": "O Amazon ElastiCache (compatível com Redis e Memcached) permite implantar e escalar caches na memória na nuvem, aliviando a carga nos bancos de dados principais e reduzindo a latência."
   },
   {
     "id": 8,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual serviço de análise sem servidor permite consultar dados armazenados diretamente no Amazon S3 utilizando comandos SQL padrão, pagando apenas pelas consultas executadas?",
+    "alternativas": [
+      "Amazon EMR",
+      "Amazon Athena",
+      "Amazon QuickSight",
+      "Amazon Kinesis"
+    ],
+    "correta": 1,
+    "explicacao": "O Amazon Athena é um serviço de consultas interativas sem servidor que facilita a análise de dados diretamente no Amazon S3 usando SQL padrão, sem necessidade de carregar os dados em um banco."
   },
   {
     "id": 9,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual é a principal diferença funcional entre um Security Group e uma Network ACL (NACL) dentro de uma Amazon VPC?",
+    "alternativas": [
+      "Security Groups operam no nível de sub-rede e NACLs no nível de instância",
+      "Security Groups são stateful (com estado) e NACLs são stateless (sem estado)",
+      "Security Groups suportam regras de negação (Deny) explícitas e NACLs apenas permissão (Allow)",
+      "NACLs avaliam regras apenas no tráfego de entrada, enquanto Security Groups avaliam entrada e saída"
+    ],
+    "correta": 1,
+    "explicacao": "Security Groups são stateful (se o tráfego de entrada é permitido, a resposta de saída é automaticamente liberada) e operam no nível da instância. NACLs são stateless (exigem regras explícitas de entrada e saída) e operam no nível da sub-rede."
   },
   {
     "id": 10,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual serviço da AWS protege aplicações web contra ataques comuns na camada de aplicação (como SQL Injection e Cross-Site Scripting - XSS) através da criação de regras de filtragem de tráfego HTTP/HTTPS?",
+    "alternativas": [
+      "AWS Shield",
+      "Amazon Inspector",
+      "Amazon GuardDuty",
+      "AWS WAF (Web Application Firewall)"
+    ],
+    "correta": 3,
+    "explicacao": "O AWS WAF filtra tráfego web malicioso na camada 7 (HTTP/HTTPS) bloqueando padrões como SQL Injection e XSS. O AWS Shield é focado especificamente em proteção contra ataques DDoS."
   },
   {
     "id": 11,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual serviço gerenciado de detecção de ameaças monitora continuamente logs da AWS (como VPC Flow Logs, CloudTrail e logs de DNS) usando Machine Learning para identificar atividades maliciosas ou não autorizadas na conta?",
+    "alternativas": [
+      "Amazon GuardDuty",
+      "AWS Macie",
+      "AWS Artifact",
+      "AWS Secrets Manager"
+    ],
+    "correta": 0,
+    "explicacao": "O Amazon GuardDuty é o serviço de detecção inteligente de ameaças que analisa logs continuamente para alertar sobre comportamentos suspeitos (como instâncias comprometidas minerando criptomoedas)."
   },
   {
     "id": 12,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Uma empresa precisa descobrir e proteger automaticamente dados sensíveis (como números de CPF, cartões de crédito e informações pessoais identificáveis - PII) armazenados em seus buckets do Amazon S3. Qual serviço deve ser ativado?",
+    "alternativas": [
+      "Amazon Inspector",
+      "AWS KMS",
+      "Amazon Macie",
+      "AWS Certificate Manager"
+    ],
+    "correta": 2,
+    "explicacao": "O Amazon Macie utiliza machine learning e correspondência de padrões para descobrir, classificar e proteger dados confidenciais (PII) armazenados no Amazon S3."
   },
   {
     "id": 13,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Uma aplicação possui um padrão de uso constante e previsível por um período de 3 anos, mas a equipe de engenharia pretende migrar a arquitetura de instâncias EC2 para contêineres (AWS Fargate) no segundo ano. Qual opção de compra oferece o melhor desconto mantendo essa flexibilidade?",
+    "alternativas": [
+      "Standard Reserved Instances",
+      "Instâncias Spot",
+      "EC2 Instance Savings Plans",
+      "Compute Savings Plans"
+    ],
+    "correta": 3,
+    "explicacao": "Os Compute Savings Plans oferecem descontos de até 66% e aplicam-se automaticamente ao uso de EC2 (independentemente da família ou região), AWS Fargate e AWS Lambda, garantindo total flexibilidade arquitetural."
   },
   {
     "id": 14,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual recurso do Amazon EC2 contém as informações necessárias para iniciar uma instância, incluindo o sistema operacional, o servidor de aplicativos e os softwares pré-configurados?",
+    "alternativas": [
+      "Amazon Machine Image (AMI)",
+      "EBS Snapshot",
+      "EC2 Instance Store",
+      "Auto Scaling Launch Template"
+    ],
+    "correta": 0,
+    "explicacao": "Uma Amazon Machine Image (AMI) é o modelo (template) que contém a configuração de software (sistema operacional, servidor de aplicação e aplicativos) necessária para lançar uma instância EC2."
   },
   {
     "id": 15,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual é uma característica fundamental dos volumes de armazenamento temporário conhecidos como EC2 Instance Store?",
+    "alternativas": [
+      "Os dados persistem mesmo após a instância EC2 ser interrompida (stopped) ou encerrada (terminated)",
+      "Os dados são perdidos se a instância for interrompida (stopped), hibernada ou encerrada (terminated)",
+      "São volumes de rede replicados automaticamente entre várias Zonas de Disponibilidade",
+      "Podem ser desanexados de uma instância EC2 e anexados a outra em execução"
+    ],
+    "correta": 1,
+    "explicacao": "O Instance Store fornece armazenamento em nível de bloco temporário (efêmero) localizado em discos fisicamente conectados ao servidor host. Se a instância for parada ou encerrada, os dados são perdidos (diferente do Amazon EBS)."
   },
   {
     "id": 16,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Uma empresa armazena arquivos no Amazon S3 com padrões de acesso imprevisíveis, onde alguns objetos são muito acessados em um mês e passam meses sem nenhum acesso depois. Qual classe de armazenamento otimiza custos automaticamente sem taxas de recuperação?",
+    "alternativas": [
+      "S3 Standard-IA",
+      "S3 One Zone-IA",
+      "S3 Intelligent-Tiering",
+      "S3 Glacier Flexible Retrieval"
+    ],
+    "correta": 2,
+    "explicacao": "O S3 Intelligent-Tiering monitora os padrões de acesso e move automaticamente os objetos entre camadas de acesso frequente e infrequente para maximizar a economia, sem cobrança por recuperação de dados."
   },
   {
     "id": 17,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Para atender a requisitos rigorosos de conformidade regulatória, uma empresa precisa garantir que os objetos gravados em um bucket do Amazon S3 não possam ser excluídos ou sobrescritos por ninguém (nem mesmo pelo usuário raiz) durante um período fixo de 5 anos. Qual recurso deve ser habilitado?",
+    "alternativas": [
+      "S3 Object Lock (modo Compliance)",
+      "S3 Versioning",
+      "S3 Cross-Region Replication",
+      "S3 Lifecycle Policies"
+    ],
+    "correta": 0,
+    "explicacao": "O S3 Object Lock implementa o modelo WORM (Write-Once-Read-Many). No modo Compliance, nenhum usuário, incluindo o usuário root da conta AWS, pode substituir ou excluir o objeto durante o período de retenção definido."
   },
   {
     "id": 18,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Qual recurso do Amazon S3 automatiza a transição de objetos para classes de armazenamento mais baratas (como S3 Glacier) após 90 dias e a exclusão permanente desses arquivos após 365 dias?",
+    "alternativas": [
+      "S3 Transfer Acceleration",
+      "S3 Storage Lens",
+      "S3 Event Notifications",
+      "S3 Lifecycle Policies (Políticas de Ciclo de Vida)"
+    ],
+    "correta": 3,
+    "explicacao": "As Políticas de Ciclo de Vida do S3 (Lifecycle Policies) permitem definir regras de transição (mover para classes mais econômicas) e expiração (excluir objetos) com base na idade do arquivo."
   },
   {
     "id": 19,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Uma aplicação web moderna precisa rotear o tráfego HTTP/HTTPS de entrada com base no caminho da URL (por exemplo, enviar '/api' para um grupo de instâncias e '/imagens' para outro). Qual balanceador de carga da AWS deve ser utilizado?",
+    "alternativas": [
+      "Network Load Balancer (NLB)",
+      "Gateway Load Balancer (GWLB)",
+      "Application Load Balancer (ALB)",
+      "Classic Load Balancer (CLB)"
+    ],
+    "correta": 2,
+    "explicacao": "O Application Load Balancer (ALB) opera na camada 7 (Aplicação - HTTP/HTTPS) e suporta roteamento avançado baseado em conteúdo, como caminho da URL (path-based), cabeçalhos e nome do host."
   },
   {
     "id": 20,
-    "pergunta": "",
-    "alternativas": ["", "", "", ""],
-    "correta": null,
-    "explicacao": ""
+    "pergunta": "Como o Elastic Load Balancing (ELB) trabalha em conjunto com o Amazon EC2 Auto Scaling para garantir alta disponibilidade e elasticidade em uma arquitetura?",
+    "alternativas": [
+      "O ELB cria novas instâncias EC2 quando o uso de CPU ultrapassa 80%",
+      "O Auto Scaling registra automaticamente as novas instâncias criadas no Target Group do ELB e o ELB realiza verificações de integridade (Health Checks)",
+      "O ELB substitui a necessidade de usar múltiplas Zonas de Disponibilidade",
+      "O Auto Scaling distribui o tráfego de rede diretamente entre os usuários finais sem precisar de IPs"
+    ],
+    "correta": 1,
+    "explicacao": "O Auto Scaling gerencia a criação e remoção de instâncias com base na demanda, registrando-as automaticamente no balanceador de carga. O ELB, por sua vez, monitora a saúde (Health Checks) dessas instâncias e direciona o tráfego apenas para as que estão saudáveis."
   }
 ]
