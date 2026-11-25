@@ -17,6 +17,11 @@ const quadros = [
     id: 3,
     titulo: "Quadro 3",
     arquivo: "quadro3.json",
+},
+{
+  id: 4,
+  titulo: "Quadro 4",
+  arquivo: "quadro4.json"
 }
 ];
 
